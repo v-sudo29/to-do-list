@@ -84,7 +84,7 @@ header {
 }
 
 /* Tasks */
-.task-list-div {
+.task-list-div, .completed-tasks-list-div {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;

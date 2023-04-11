@@ -9,7 +9,7 @@ export default function makeTask(task) {
   const taskInput = document.createElement('input');
 
   // Set attributes
-  taskDiv.classList.add('task-div');
+  taskDiv.classList.add('task-div', `task-div-${hyphendTask}`);
   taskLabel.classList.add('task-label');
   taskInput.classList.add('task-input');
   
