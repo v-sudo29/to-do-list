@@ -1,3 +1,5 @@
+import strikethrough from './strikethrough.js';
+
 export default function makeTask(task) {
   const hyphendTask = task.replace(/\s+/g, "-");
 
@@ -18,6 +20,9 @@ export default function makeTask(task) {
 
   // Set inner HTML
   taskLabel.innerHTML = `${task}`;
+
+  // Add event listener to input
+  taskInput.addEventListener('click', () => strikethrough(taskLabel));
 
   // Append elements
   taskDiv.appendChild(taskInput);
