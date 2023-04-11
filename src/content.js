@@ -1,47 +1,20 @@
+import displayDate from './date.js';
+import defaultTaskList from './default-task-list.js';
+import defaultTabs from './default-tabs.js';
+
 export default function content() {
-  const body = document.querySelector('body');
 
-  // Create elements
+  // Create content main element
   const contentMain = document.createElement('main');
-
-    // Date
-    const dateDiv = document.createElement('div');
-
-    // Tabs
-    const tabsDiv = document.createElement('div');
-    const workTab = document.createElement('div');
-    const personalTab = document.createElement('div');
-
-    // Task list
-    const taskListDiv = document.createElement('div');
-    const dummyTask = document.createElement('div');
 
   // Set attributes
   contentMain.classList.add('content-main');
-  dateDiv.classList.add('date-div');
-  tabsDiv.classList.add('tabs-div');
-  workTab.classList.add('work-div');
-  personalTab.classList.add('personal-div');
 
-  // Set inner HTML
-  
-    // Tabs
-    workTab.innerHTML = 'work';
-    personalTab.innerHTML = 'personal';
-
-    // Dummy task
-    dummyTask.innerHTML = 'Read a book';
-
-  // Append elements
-  tabsDiv.appendChild(workTab);
-  tabsDiv.appendChild(personalTab);
-
-  taskListDiv.appendChild(dummyTask);
-
-  contentMain.appendChild(dateDiv);
-  contentMain.appendChild(tabsDiv);
-  contentMain.appendChild(taskListDiv);
+  contentMain.appendChild(displayDate());
+  contentMain.appendChild(defaultTabs());
+  contentMain.appendChild(defaultTaskList());
 
   // Return appended content main
+  const body = document.querySelector('body');
   return body.appendChild(contentMain);
 }
