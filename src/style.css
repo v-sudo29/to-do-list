@@ -65,6 +65,7 @@ header {
   gap: 1.5rem;
   padding: 0.3rem;
   border: 1px solid blue;
+  color: #a3a3a3;
 }
 
 .work-div {
@@ -81,6 +82,12 @@ header {
   width: 5.5rem;
   font-size: 1.2rem;
   border: 1px solid red;
+}
+
+/* Highlight current tab */
+.currentTab {
+  color: #222222;
+  border-bottom: 2px solid;
 }
 
 /* Tasks */
