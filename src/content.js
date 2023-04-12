@@ -1,7 +1,8 @@
 import displayDate from './date.js';
+import defaultTabs from './default-tabs.js';
 import {defaultWorkTaskList, workTaskArray} from './default-work-task-list.js';
 import completedTaskList from './completed-list.js';
-import defaultTabs from './default-tabs.js';
+import addTaskButton from './add-task-button.js';
 
 export default function content() {
 
@@ -17,6 +18,7 @@ export default function content() {
   contentDiv.appendChild(defaultTabs());
   contentDiv.appendChild(defaultWorkTaskList());
   contentDiv.appendChild(completedTaskList());
+  contentDiv.appendChild(addTaskButton());
   
   contentMain.appendChild(contentDiv);
 
