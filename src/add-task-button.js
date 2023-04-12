@@ -11,5 +11,6 @@ export default function addTaskButton() {
   // Add event listener to open modal
   addTaskBtn.addEventListener('click', () => displayTaskModal());
 
-  return addTaskDiv.appendChild(addTaskBtn);
+  addTaskDiv.appendChild(addTaskBtn);
+  return addTaskDiv;
 }
