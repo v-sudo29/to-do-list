@@ -1,4 +1,4 @@
-import makeTask from './task.js';
+import makeTask from '../task-list/make-task.js';
 
 const workTaskArray = [];
 

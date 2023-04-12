@@ -1,5 +1,5 @@
-import makeTask from "../task";
-import { workTaskArray } from "../default-work-task-list";
+import makeTask from "../task-list/make-task";
+import { workTaskArray } from "../task-list/default-work-task-list";
 
 function taskModalRemove() {
   const taskModal = document.querySelector('.modal-div');
@@ -32,7 +32,8 @@ function addNewTask() {
     } else if (projectName === 'personal') {
       console.log('personal project!');
     }
-    console.log('end!');
+
+  
 
 }
 

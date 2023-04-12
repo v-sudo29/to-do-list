@@ -9,9 +9,6 @@ export default function defaultTabs() {
   // Set attributes
   defaultTabsDiv.classList.add('tabs-div')
 
-  // Set inner HTML
-  
-
   // Append elements
   defaultTabsDiv.appendChild(workTab());
   defaultTabsDiv.appendChild(personalTab());

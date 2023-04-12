@@ -1,4 +1,4 @@
-import displayTaskModal from "./modals/displayTaskModal";
+import displayTaskModal from "../modals/displayTaskModal";
 
 export default function addTaskButton() {
   const addTaskDiv = document.createElement('div');

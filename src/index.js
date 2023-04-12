@@ -1,6 +1,6 @@
-import './style.css';
-import header from './header.js';
-import content from './content.js';
+import './styles/style.css';
+import header from './styles/header.js';
+import content from './styles/content.js';
 
 header();
 content();
