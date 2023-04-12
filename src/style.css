@@ -160,6 +160,7 @@ label {
   cursor: pointer;
 
   padding: 0.1rem 0.2rem;
+  transition: 150ms ease-in-out;
 }
 
 .add-task-btn:hover {
@@ -217,6 +218,8 @@ label {
   border-radius: 0.2rem;
   font-size: 15px;
   padding: 0 10px;
+
+  transition: 150ms ease-in-out;
 }
 
 .textbox:focus {
@@ -248,6 +251,8 @@ label {
   padding: 0.7rem 3rem;
   font-size: 1rem;
   font-weight: 500;
+
+  transition: 150ms ease-in-out;
 }
 
 .modal-add-button {
