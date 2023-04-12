@@ -66,7 +66,7 @@ header {
   gap: 1.5rem;
   padding: 0.3rem;
   color: #a3a3a3;
-  cursor:default;
+  cursor: default;
 }
 
 .work-div {
@@ -102,19 +102,15 @@ header {
   gap: 0.6rem;
 }
 
-.task-label {
-}
-
 input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   appearance: none;
   flex-grow: 0;
-  border-radius: 0.05rem;
   background-color: #FFFFFF;
   cursor: pointer;
-  border: 1px solid rgb(125, 125, 125);
-  border-radius: 50%;
+  border: 0.10rem solid rgb(125, 125, 125);
+  border-radius: 2rem;
 
   display: grid;
   place-content: center;
@@ -122,8 +118,8 @@ input[type="checkbox"] {
 
 [type=checkbox]::before {
   content: "";
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.62rem;
+  height: 0.62rem;
   border-radius: inherit;
   transform: scale(0);
   transition: 200ms transform ease-in-out;

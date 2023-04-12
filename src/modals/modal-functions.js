@@ -1,5 +1,6 @@
 import makeTask from "../task-list/make-task";
 import { workTaskArray } from "../task-list/default-work-task-list";
+import { personalTaskArray } from "../task-list/default-personal-task-list";
 
 function taskModalRemove() {
   const taskModal = document.querySelector('.modal-div');
@@ -28,13 +29,9 @@ function addNewTask() {
     // Default tabs: work and personal
     if (projectName === 'work') {
       workTaskArray.push(titleValue);
-      console.table(workTaskArray);
     } else if (projectName === 'personal') {
-      console.log('personal project!');
+      personalTaskArray.push(titleValue);
     }
-
-  
-
 }
 
 export {taskModalRemove, addNewTask};

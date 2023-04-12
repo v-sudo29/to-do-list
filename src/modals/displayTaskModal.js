@@ -49,7 +49,7 @@ export default function displayTaskModal() {
   descriptionInput.classList.add('textbox', 'task-description-box');
   descriptionInput.setAttribute('id', 'task-description');
   descriptionInput.setAttribute('name', 'task-description');
-  descriptionInput.setAttribute('placeholder', 'Description');
+  descriptionInput.setAttribute('placeholder', 'Description (optional)');
   descriptionInput.setAttribute('rows', '4');
   descriptionLabel.setAttribute('cols', '50');
 
