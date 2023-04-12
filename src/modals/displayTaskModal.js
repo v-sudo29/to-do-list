@@ -1,4 +1,4 @@
-import { taskModalRemove } from "./modal-functions";
+import { addNewTask, taskModalRemove } from "./modal-functions";
 
 export default function displayTaskModal() {
 
@@ -61,7 +61,15 @@ export default function displayTaskModal() {
   cancelBtn.classList.add('modal-cancel-button');
 
   // Add event listener to buttons
-  cancelBtn.addEventListener('click', () => taskModalRemove());
+  addBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    addNewTask();
+  });
+
+  cancelBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    taskModalRemove();
+  });
 
   // Set inner HTML
   titleLabel.innerHTML = 'Title';

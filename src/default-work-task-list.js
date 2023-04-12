@@ -18,9 +18,9 @@ function defaultWorkTaskList() {
   taskListDiv.appendChild(defaultTaskThree);
 
   // Add default tasks to data structure
-  workTaskArray.push(defaultTaskOne);
-  workTaskArray.push(defaultTaskTwo);
-  workTaskArray.push(defaultTaskThree);
+  workTaskArray.push('Read a book');
+  workTaskArray.push('Wash dishes');
+  workTaskArray.push('Cook dinner');
 
   return taskListDiv;
 }
