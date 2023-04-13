@@ -1,4 +1,4 @@
-import { addOverlay } from "../overlay";
+import { addOverlay } from "./overlay";
 import { addNewTask, taskModalRemove } from "./modal-functions";
 
 export default function displayTaskModal() {

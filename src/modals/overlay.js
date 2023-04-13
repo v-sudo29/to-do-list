@@ -1,4 +1,4 @@
-import { taskModalRemove } from "./modals/modal-functions";
+import { taskModalRemove } from "./modal-functions";
 
 function overlayOff() {
   const overlayDiv = document.querySelector('.overlay');

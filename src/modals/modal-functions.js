@@ -3,7 +3,7 @@ import { workTaskArray } from "../task-list/default-work-task-list";
 import { personalTaskArray } from "../task-list/default-personal-task-list";
 import getProjectName from "../get-project-name";
 import { updateTaskCount } from "../tabs/update-task-count";
-import { overlayOff } from "../overlay";
+import { overlayOff } from "./overlay";
 
 function taskModalRemove() {
   const taskModal = document.querySelector('.modal-div');
