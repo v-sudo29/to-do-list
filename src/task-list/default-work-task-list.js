@@ -1,9 +1,9 @@
-import makeTask from '../task-list/make-task.js';
+import { taskFactory } from '../task-list/make-task.js';
 
 const workTaskArray = [
-  'Read a book',
-  'Wash dishes',
-  'Cook dinner'
+  taskFactory('Read a book'),
+  taskFactory('Wash dishes'),
+  taskFactory('Cook dinner')
 ];
 
 function defaultWorkTaskList() {
@@ -12,19 +12,9 @@ function defaultWorkTaskList() {
   const taskListDiv = document.createElement('div');
   taskListDiv.classList.add('task-list-div');
 
-  // Append default tasks
-  const defaultTaskOne = makeTask('Read a book');
-  const defaultTaskTwo = makeTask('Wash dishes');
-  const defaultTaskThree = makeTask('Cook dinner');
-
-  taskListDiv.appendChild(defaultTaskOne);
-  taskListDiv.appendChild(defaultTaskTwo);
-  taskListDiv.appendChild(defaultTaskThree);
-
-  // Add default tasks to data structure
-  // workTaskArray.push('Read a book');
-  // workTaskArray.push('Wash dishes');
-  // workTaskArray.push('Cook dinner');
+  taskListDiv.appendChild(workTaskArray[0].taskDivHTML);
+  taskListDiv.appendChild(workTaskArray[1].taskDivHTML);
+  taskListDiv.appendChild(workTaskArray[2].taskDivHTML);
 
   return taskListDiv;
 }

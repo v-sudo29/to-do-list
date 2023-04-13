@@ -1,5 +1,5 @@
 import { personalTaskArray } from "../task-list/default-personal-task-list";
-import makeTask from "../task-list/make-task";
+import { updateTaskCount } from "./update-task-count";
 
 export default function displayPersonalTab() {
   const personalTab = document.createElement('div');
@@ -32,7 +32,7 @@ export default function displayPersonalTab() {
 
       // Display current project tasks
       for (let i = 0; i < personalTaskArray.length; i++) {
-        const task = makeTask(personalTaskArray[i]);
+        const task = personalTaskArray[i].taskDivHTML;
         taskListDiv.append(task);
       }
 
@@ -41,11 +41,7 @@ export default function displayPersonalTab() {
       personalTabHTML.classList.add('currentTab');
 
       // Update task count
-      if (personalTaskArray.length > 0) {
-        personalTab.innerHTML = `personal (${personalTaskArray.length})`;
-      } else {
-        personalTab.innerHTML = 'personal';
-      }
+      updateTaskCount(personalTab, personalTaskArray);
     }
   });
 

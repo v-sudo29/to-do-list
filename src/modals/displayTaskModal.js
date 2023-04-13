@@ -1,3 +1,4 @@
+import { addOverlay } from "../overlay";
 import { addNewTask, taskModalRemove } from "./modal-functions";
 
 export default function displayTaskModal() {
@@ -101,4 +102,5 @@ export default function displayTaskModal() {
   // Append element to page
   const contentDiv = document.querySelector('.content-div');
   contentDiv.appendChild(modalDiv);
+  contentDiv.appendChild(addOverlay());
 }

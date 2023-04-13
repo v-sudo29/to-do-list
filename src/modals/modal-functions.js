@@ -1,12 +1,14 @@
-import makeTask from "../task-list/make-task";
+import { taskFactory } from "../task-list/make-task";
 import { workTaskArray } from "../task-list/default-work-task-list";
 import { personalTaskArray } from "../task-list/default-personal-task-list";
 import getProjectName from "../get-project-name";
-import updateTaskCount from "../tabs/update-task-count";
+import { updateTaskCount } from "../tabs/update-task-count";
+import { overlayOff } from "../overlay";
 
 function taskModalRemove() {
   const taskModal = document.querySelector('.modal-div');
   taskModal.remove();
+  overlayOff();
 }
 
 function addNewTask() {
@@ -17,11 +19,12 @@ function addNewTask() {
     alert('Please fill out title field!');
     return;
   } 
-  const newTask = makeTask(titleValue);
+
+  const newTask = taskFactory(titleValue);
 
   // Append new task to current task div
   const taskDivList = document.querySelector('.task-list-div');
-  taskDivList.appendChild(newTask);
+  taskDivList.appendChild(newTask.taskDivHTML);
   taskModalRemove();
 
   // Add new task to current tab's array
@@ -29,12 +32,12 @@ function addNewTask() {
   const currentProject = document.querySelector('.currentTab');
   const projectName = getProjectName(currentProject);
 
-    // Default tabs: work and personal
+    // Push new tabs to default work and personal
     if (projectName === 'work') {
-      workTaskArray.push(titleValue);
+      workTaskArray.push(newTask);
       updateTaskCount(currentProject, workTaskArray);
     } else if (projectName === 'personal') {
-      personalTaskArray.push(titleValue);
+      personalTaskArray.push(newTask);
       updateTaskCount(currentProject, personalTaskArray);
     }
 }

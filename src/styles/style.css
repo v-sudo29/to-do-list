@@ -142,6 +142,18 @@ label {
   color: #5c5c5c;
 }
 
+.delete-task-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color:#cfcfcf;
+  font-weight: 600;
+}
+
+.delete-task-button:hover {
+  color: #222222;
+}
+
 /* Add Task Button */
 .add-task-btn {
   border: none;
@@ -163,6 +175,7 @@ label {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -70%) scale(0);
+  transition: transform 300ms;
   z-index: 10;
   border-radius: 0.2rem;
   background-color:#FFFFFF;
@@ -259,4 +272,17 @@ label {
 
 .modal-cancel-button:hover {
   background-color: #cfcfcf;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  opacity: 1;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: all;
 }

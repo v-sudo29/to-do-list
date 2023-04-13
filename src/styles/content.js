@@ -1,6 +1,6 @@
 import displayDate from './date.js';
 import defaultTabs from '../tabs/default-tabs.js';
-import {defaultWorkTaskList} from '../task-list/default-work-task-list.js';
+import { defaultWorkTaskList } from '../task-list/default-work-task-list.js';
 import addTaskButton from './add-task-button.js';
 
 export default function content() {

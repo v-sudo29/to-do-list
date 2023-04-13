@@ -1,6 +1,7 @@
 import { workTaskArray } from "../task-list/default-work-task-list";
-import makeTask from "../task-list/make-task";
-import updateTaskCount from "./update-task-count";
+import { updateTaskCount } from "./update-task-count";
+
+import { countStrikeThroughs } from "./update-task-count";
 
 export default function displayWorkTab() {
   const workTab = document.createElement('div');
@@ -28,7 +29,7 @@ export default function displayWorkTab() {
 
       // Display current project tasks
       for (let i = 0; i < workTaskArray.length; i++) {
-        const task = makeTask(workTaskArray[i]);
+        const task = workTaskArray[i].taskDivHTML;
         taskListDiv.append(task);
       }
 
@@ -38,5 +39,6 @@ export default function displayWorkTab() {
 
     }
   });
+  countStrikeThroughs(workTaskArray);
   return workTab;
 }
