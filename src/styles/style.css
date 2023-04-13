@@ -72,14 +72,13 @@ header {
 .work-div {
   display: flex;
   justify-content: center;
-  width: 3.3rem;
   font-size: 1.2rem;
 }
 
 .personal-div {
   display: flex;
   justify-content: center;
-  width: 5.5rem;
+
   font-size: 1.2rem;
 }
 

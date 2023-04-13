@@ -6,9 +6,17 @@ export default function displayPersonalTab() {
   personalTab.classList.add('personal-div');
   personalTab.innerHTML = 'personal';
 
+  // Count amount of tasks from array and display count
+  if (personalTaskArray.length > 0) {
+    personalTab.innerHTML = `personal (${personalTaskArray.length})`;
+  } else {
+    personalTab.innerHTML = 'personal';
+  }
+
   // Add event listener to remove current task list, 
   // display project task list, 
   // add/remove currentTab class
+  // update task count
   personalTab.addEventListener('click', () => {
   const currentProject = document.querySelector('.currentTab');
   const projectName = currentProject.innerHTML;
@@ -28,9 +36,16 @@ export default function displayPersonalTab() {
         taskListDiv.append(task);
       }
 
+      // Update currentTab
       currentProject.classList.remove('currentTab');
       personalTabHTML.classList.add('currentTab');
-      console.log('executed!');
+
+      // Update task count
+      if (personalTaskArray.length > 0) {
+        personalTab.innerHTML = `personal (${personalTaskArray.length})`;
+      } else {
+        personalTab.innerHTML = 'personal';
+      }
     }
   });
 

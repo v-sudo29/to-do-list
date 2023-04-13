@@ -1,6 +1,8 @@
 import makeTask from "../task-list/make-task";
 import { workTaskArray } from "../task-list/default-work-task-list";
 import { personalTaskArray } from "../task-list/default-personal-task-list";
+import getProjectName from "../get-project-name";
+import updateTaskCount from "../tabs/update-task-count";
 
 function taskModalRemove() {
   const taskModal = document.querySelector('.modal-div');
@@ -23,14 +25,17 @@ function addNewTask() {
   taskModalRemove();
 
   // Add new task to current tab's array
+  // Update task count
   const currentProject = document.querySelector('.currentTab');
-  const projectName = currentProject.innerHTML;
+  const projectName = getProjectName(currentProject);
 
     // Default tabs: work and personal
     if (projectName === 'work') {
       workTaskArray.push(titleValue);
+      updateTaskCount(currentProject, workTaskArray);
     } else if (projectName === 'personal') {
       personalTaskArray.push(titleValue);
+      updateTaskCount(currentProject, personalTaskArray);
     }
 }
 

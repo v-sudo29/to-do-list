@@ -1,6 +1,10 @@
 import makeTask from '../task-list/make-task.js';
 
-const workTaskArray = [];
+const workTaskArray = [
+  'Read a book',
+  'Wash dishes',
+  'Cook dinner'
+];
 
 function defaultWorkTaskList() {
 
@@ -18,9 +22,9 @@ function defaultWorkTaskList() {
   taskListDiv.appendChild(defaultTaskThree);
 
   // Add default tasks to data structure
-  workTaskArray.push('Read a book');
-  workTaskArray.push('Wash dishes');
-  workTaskArray.push('Cook dinner');
+  // workTaskArray.push('Read a book');
+  // workTaskArray.push('Wash dishes');
+  // workTaskArray.push('Cook dinner');
 
   return taskListDiv;
 }

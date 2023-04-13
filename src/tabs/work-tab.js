@@ -1,12 +1,16 @@
 import { workTaskArray } from "../task-list/default-work-task-list";
 import makeTask from "../task-list/make-task";
+import updateTaskCount from "./update-task-count";
 
 export default function displayWorkTab() {
   const workTab = document.createElement('div');
   workTab.classList.add('work-div', 'currentTab');
-  workTab.innerHTML = 'work';
 
-  // Add event listener to remove current task list, 
+  // Count amount of tasks from array and display count
+  updateTaskCount(workTab, workTaskArray);
+
+  // Add event listener to: 
+  // remove current task list, 
   // display project task list, 
   // add/remove currentTab class
   workTab.addEventListener('click', () => {
@@ -28,9 +32,10 @@ export default function displayWorkTab() {
         taskListDiv.append(task);
       }
 
+      // Update currentTab
       currentProject.classList.remove('currentTab');
       workTabHTML.classList.add('currentTab');
-      console.log('executed!');
+
     }
   });
   return workTab;
